@@ -1,3 +1,4 @@
+import {Hero} from './hero';
 
 export class App {
   title = 'Tour of Heroes';
@@ -8,12 +9,6 @@ export class App {
     this.selectedHero = hero;
   }
 
-}
-
-
-export class Hero {
-  id: number;
-  name: string;
 }
 
 const HEROES: Hero[] = [
