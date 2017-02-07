@@ -1,8 +1,7 @@
 <template>
     <h1>${title}</h1>
     <nav>
-        <a route-href="route: dashboard">Dashboard</a>
-        <a route-href="route: heroes">Heroes</a>
+        <a repeat.for="route of router.navigation" href.bind="route.href">${route.title}</a>
     </nav>
     <router-view></router-view>
 </template>
