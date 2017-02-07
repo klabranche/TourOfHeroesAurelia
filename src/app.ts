@@ -6,7 +6,7 @@ export class App {
   configureRouter(config, router){
     config.title = 'heroes';
     config.map([
-      { route: '', name:'home', moduleId: 'home', title: 'Home'},
+      { route: ['','dashboard'], name: 'dashboard', moduleId: 'dashboard', nav: true, title: 'Dashboard'},
       { route: 'heroes', name:'heroes', moduleId: 'heroes', nav:true, title: 'Select'}
     ]);
 
