@@ -1,5 +1,8 @@
 <template>
-    <require from="./heroes"></require>
+    <!-- <require from="./heroes"></require> -->
     <h1>${title}</h1>
-    <my-heroes></my-heroes>
+    <nav>
+        <a route-href="route: heroes">Heroes</a>
+    </nav>
+    <router-view></router-view>
 </template>
