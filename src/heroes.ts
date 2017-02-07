@@ -10,7 +10,7 @@ export class Heroes {
   selectedHero: Hero = null;
 
   constructor(private heroService: HeroService) {
-    
+
   }
 
 /* 
@@ -22,12 +22,12 @@ export class Heroes {
 
   getHeroes(): void {
 
-    /* original version, pre appendix: take it slow in https://angular.io/docs/ts/latest/tutorial/toh-pt4.html
-      this.heroService.getHeroes()
+     this.heroService.getHeroes()
                     .then(heroes => this.heroes = heroes);    
-    */                    
-    this.heroService.getHeroesSlowly()
+                    
+    /* this.heroService.getHeroesSlowly()
                     .then(heroes => this.heroes = heroes);
+    */                    
   }
 
   onSelect(hero: Hero): void {
