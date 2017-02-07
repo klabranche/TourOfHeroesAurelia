@@ -1,0 +1,12 @@
+<template>
+  <require from="./heroes.css"></require>
+  <require from="./hero-detail"></require>
+
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li repeat.for="hero of heroes" class="${hero === selectedHero ? 'selected':''}" click.delegate="onSelect(hero)">
+    <span class="badge">${hero.id}</span> ${hero.name}
+  </li>
+</ul>
+<my-hero-detail hero.bind="selectedHero"></my-hero-detail>
+</template>
