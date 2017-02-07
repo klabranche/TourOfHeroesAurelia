@@ -1,3 +1,4 @@
+import {APPROUTING} from './app-routing';
 
 export class App {
   title = 'Tour of Heroes';
@@ -5,11 +6,7 @@ export class App {
 
   configureRouter(config, router){
     config.title = 'heroes';
-    config.map([
-      { route: ['','dashboard'], name: 'dashboard', moduleId: 'dashboard', nav: true, title: 'Dashboard'},
-      { route: 'heroes', name:'heroes', moduleId: 'heroes', nav:true, title: 'Heroes'},
-      { route: 'detail/:id', name:'hero-detail', moduleId:'hero-detail',nav:false}
-    ]);
+    config.map(APPROUTING);
 
     this.router = router;
   }
