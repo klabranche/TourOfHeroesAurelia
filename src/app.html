@@ -1,7 +1,8 @@
 <template>
+    <require from="./app.css"></require>
     <h1>${title}</h1>
     <nav>
-        <a repeat.for="route of router.navigation" href.bind="route.href">${route.title}</a>
+        <a repeat.for="route of router.navigation" href.bind="route.href" class="${route.isActive ? 'active':''}">${route.title}</a>
     </nav>
     <router-view></router-view>
 </template>

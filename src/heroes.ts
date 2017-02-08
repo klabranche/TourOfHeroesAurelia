@@ -1,4 +1,5 @@
 import { customElement, autoinject } from 'aurelia-framework';
+import { Router } from 'aurelia-router';
 
 import {Hero} from './hero';
 import { HeroService } from './hero-service';
@@ -9,7 +10,8 @@ export class Heroes {
   heroes: Hero[];
   selectedHero: Hero = null;
 
-  constructor(private heroService: HeroService) {
+  constructor(private heroService: HeroService,
+              private router: Router) {
 
   }
 
@@ -34,4 +36,7 @@ export class Heroes {
     this.selectedHero = hero;
   }
 
+  gotoDetail(): void {
+    this.router.navigateToRoute('hero-detail', {id: this.selectedHero.id});
+  }
 }
